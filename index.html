@@ -17,10 +17,19 @@
 </div>
 <h2> Add New Super Hero </h2>
 <div>
-  <input type="text" ng-model="vm.newSuper.name">
+  <label>Name
+    <input type="text" ng-model="vm.newSuper.name">
+  </label>
+  <label> Number
   <input type="text" ng-model="vm.newSuper.number">
+</label>
+<label>Affiliation 
   <input type="text" ng-model="vm.newSuper.affiliation">
+</label>
+<label>Photo URL
 <input type="text" ng-model="vm.newSuper.photo_url">
+</label>
+
 <button ng-click="vm.addSuper()"> Add Super Hero</button>
 </div>
 
