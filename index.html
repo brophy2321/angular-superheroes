@@ -7,8 +7,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
-<body>
-  {{ 5 * 9 }}
+<body ng-controller="superCtrl as vm">
+  <div ng-repeat="super in vm.super">
+
+    <p> {{ super.name}} </p>
+    <p> {{ super.number}} </p>
+    <p> {{ super.affiliation}} </p>
+<img ng-src= {{super.photo_url}} >
+</div>
+<h2> Add New Super Hero </h2>
+<div>
+  <input type="text" ng-model="vm.newSuper.name">
+  <input type="text" ng-model="vm.newSuper.number">
+  <input type="text" ng-model="vm.newSuper.affiliation">
+<input type="text" ng-model="vm.newSuper.photo_url">
+<button ng-click="vm.addSuper()"> Add Super Hero</button>
+</div>
+
 
 </body>
 </html>

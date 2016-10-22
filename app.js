@@ -16,3 +16,13 @@ let superData = [
 angular
   .module("superApp", [])
   .controller("superCtrl", [ superController])
+
+  function superController(){
+this.super = superData
+this.newSuper= {}
+    this.addSuper = function () {
+      this.super.push(this.newSuper)
+      this.newSuper = {}
+    }
+
+  }
